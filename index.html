@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Space Voyager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="ui-left">
+        <p id="instruction">Move the ship and collect energy! Blast requires &gt;70% Fuel.</p>
+    </div>
+
+    <div id="ui-right">
+        <div id="scoreboard">
+            <div>SCORE: <span id="score-text">0</span></div>
+            <div>HIGH: <span id="highscore-text">0</span></div>
+        </div>
+        <div id="fuel-section">
+            <p>FUEL: <span id="fuel-text">50</span>%</p>
+            <div id="fuel-bar-container">
+                <div id="fuel-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="mobile-controls">
+        <div id="joystick-zone">
+            <div id="joystick-base">
+                <div id="joystick-handle"></div>
+            </div>
+        </div>
+        <button id="mobile-blast-btn">BLAST</button>
+    </div>
+
+    <canvas id="gameCanvas"></canvas>
+
+    <div id="game-over-screen" class="hidden">
+        <h1 id="game-over-title">MISSION FAILED</h1>
+        <p id="game-over-reason"></p>
+        <button onclick="restartGame()">Launch New Mission</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
